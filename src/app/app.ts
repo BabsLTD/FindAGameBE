@@ -17,6 +17,8 @@ import {
   postCommentByEventId,
 } from "../controllers/comments-controllers";
 
+import {getS3UploadUrl} from "../controllers/s3"
+
 const app = express();
 
 app.use(cors());
@@ -29,6 +31,7 @@ app.get("/api/events/:event_id", getEventById);
 app.get("/api/users/:user_id", getUserById);
 app.get("/api/events/:event_id/comments", getCommentsByEventsId);
 app.get("/api/user/:user_id/events", getUserEvents)
+app.get("/api/s3url", getS3UploadUrl)
 
 app.post("/api/users", postUser);
 app.post("/api/events", postEvent);

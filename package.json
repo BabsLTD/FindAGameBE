@@ -43,8 +43,9 @@
   },
   "dependencies": {
     "@types/jest": "^28.1.6",
+    "aws-sdk": "^2.1213.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
+    "dotenv": "^16.0.2",
     "express": "^4.17.1",
     "pg": "^8.7.3",
     "pg-format": "^1.0.4"
