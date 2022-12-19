@@ -19,15 +19,15 @@ const seed = ({
   userevents: Userevent[];
 }) => {
   return db
-    .query(`DROP TABLE IF EXISTS userevents`)
+    .query(`DROP TABLE IF EXISTS userevents cascade`)
     .then(() => {
-      db.query(`DROP TABLE IF EXISTS comments`);
+      db.query(`DROP TABLE IF EXISTS comments cascade`);
     })
     .then(() => {
-      return db.query(`DROP TABLE IF EXISTS events`);
+      return db.query(`DROP TABLE IF EXISTS events cascade`);
     })
     .then(() => {
-      return db.query(`DROP TABLE IF EXISTS users`);
+      return db.query(`DROP TABLE IF EXISTS users cascade`);
     })
     .then(() => {
       return db.query(`

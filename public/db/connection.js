@@ -6,6 +6,9 @@ const pg_1 = require("pg");
 const dotenv_1 = __importDefault(require("dotenv"));
 let config = {};
 if (process.env.NODE_ENV === "production") {
+    dotenv_1.default.config({
+        path: `${__dirname}/../../.env.production`,
+    });
     config = {
         connectionString: process.env.DATABASE_URL,
         ssl: {
@@ -15,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 }
 else {
     dotenv_1.default.config({
-        path: `${__dirname}/../../.env`,
+        path: `${__dirname}/../../.env.development`,
     });
     config = {};
 }
