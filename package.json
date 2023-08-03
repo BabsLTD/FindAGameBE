@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "node public/app/server.js",
-    "dev": "nodemon src/app.ts",
+    "dev": "nodemon src/app/server.ts",
     "build": "tsc",
     "seed": "node public/db/runSeed.js",
     "seed:prod": "NODE_ENV=production npm run seed",
